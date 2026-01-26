@@ -16,9 +16,12 @@ using Submerged.Resources;
 namespace Submerged;
 
 [BepInAutoPlugin]
-[BepInDependency(ReactorPlugin.Id)]
+[BepInDependency(REACTOR_GUID, REACTOR_VERSION)]
 public sealed partial class SubmergedPlugin : BasePlugin
 {
+    public const string REACTOR_GUID = "gg.reactor-sunada.api";
+    public const string REACTOR_VERSION = "3.3.4-SND";
+
     public SubmergedPlugin()
     {
         InteropPatches.Initialize();
