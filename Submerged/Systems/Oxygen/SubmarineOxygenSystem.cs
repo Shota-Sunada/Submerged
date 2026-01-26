@@ -175,11 +175,13 @@ public sealed class SubmarineOxygenSystem(nint ptr) : CppObject(ptr), AU.ISystem
         try
         {
             if (player.AmOwner) KillCooldownPatches.PreventReset = true;
+            OxygenDeathAnimationPatches.IsOxygenDeath = true;
             player.MurderPlayer(player, MurderResultFlags.Succeeded | MurderResultFlags.DecisionByHost);
         }
         finally
         {
             KillCooldownPatches.PreventReset = false;
+            OxygenDeathAnimationPatches.IsOxygenDeath = false;
         }
     }
 }
