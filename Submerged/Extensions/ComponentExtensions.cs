@@ -11,7 +11,7 @@ public static class ComponentExtensions
 {
     private static Dictionary<string, Type> _registeredTypes;
 
-    private static Dictionary<string, Type> RegisteredTypes
+    public static Dictionary<string, Type> RegisteredTypes
     {
         get
         {
