@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <VersionPrefix>2026.1.26</VersionPrefix>
-        <VersionSuffix>SND</VersionSuffix>
+        <VersionSuffix Condition="'$(Configuration)' == 'Debug'">dev</VersionSuffix>
         <Authors>Submerged Team</Authors>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/SubmergedAmongUs/Submerged</RepositoryUrl>
